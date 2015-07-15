@@ -3,9 +3,9 @@
 # docker /start script
 # -----------------------------------------------------------------------------
 
-#/usr/sbin/nrpe -c /etc/nagios/nrpe.cfg -d
+/usr/sbin/nrpe -c /etc/nagios/nrpe.cfg -d
 
 # Run supervisor that in turn run the servers
-#/usr/bin/supervisord -n
+/usr/bin/supervisord -n
 
-echo "hello world"
+#echo "hello world"
