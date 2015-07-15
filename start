@@ -6,4 +6,4 @@
 /usr/sbin/nrpe -c /etc/nagios/nrpe.cfg -d
 
 # Run supervisor that in turn run the servers
-/usr/bin/supervisord -n
+#/usr/bin/supervisord -n
