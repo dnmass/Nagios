@@ -1,5 +1,5 @@
-HOST=`dockers02`
-PORT=`49230`
+HOST=dockers02
+PORT=49230
 
 /usr/bin/check_postgres --action=connection --host=$HOST --port=$PORT  --dbuser=admin --dbpass=admin --output=simple  | while read rc
 do
