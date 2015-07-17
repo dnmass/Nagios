@@ -7,6 +7,7 @@ RUN apt-get update \
         && git clone https://github.com/dnmass/Nagios.git ./Nagios/ \
         && apt-get clean \
         && cp ./Nagios/nrpe.cfg /etc/nagios/nrpe.cfg  \
+        && cp ./Nagios/check_postgres.sh /usr/lib/nagios/plugins/
         && chmod +x ./Nagios/start
 
 EXPOSE 5666
