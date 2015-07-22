@@ -1,7 +1,7 @@
 HOST=$1
 PORT=$2
 
-/usr/bin/check_postgres --action=connection --host=$HOST --port=$PORT  --dbuser=admin --dbpass=admin --output=simple  | while read rc
+/usr/bin/check_postgres --action=connection --host=$HOST --port=$PORT  --dbuser=$user --dbpass=$pw --output=simple  | while read rc
 do
 if [ $rc -eq 1 ]
 then echo "postgres check on $HOST:$PORT shows OK"
