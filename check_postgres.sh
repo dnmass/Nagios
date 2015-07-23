@@ -1,15 +1,8 @@
+#!/bin/bash
+
 HOST=$1
 PORT=$2
+user=$3
+pw=$4
 
-/usr/bin/check_postgres --action=connection --host=$HOST --port=$PORT  --dbuser=$user --dbpass=$pw --output=simple  | while read rc
-do
-if [ $rc -eq 1 ]
-then echo "postgres check on $HOST:$PORT shows OK"
-elif [ $rc -eq 2 ]
-then echo "postgres check on $HOST:$PORT shows WARNING"
-elif [ $rc -eq 3 ]
-then echo "postgres check on $HOST:$PORT shows CRITICAL"
-elif [ $rc -eq 4 ]
-then echo "postgres check on $HOST:$PORT shows UNKNOWN"
-fi
-done
+/usr/bin/check_postgres --action=connection --host=$HOST --port=$PORT  --dbuser=$user --dbpass=$pw --output=simple  
