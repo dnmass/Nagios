@@ -9,6 +9,7 @@ RUN apt-get update \
         && cp ./Nagios/nrpe.cfg /etc/nagios/nrpe.cfg  \
 	&& cp ./Nagios/check_mongodb.py /usr/lib/nagios/plugins/ \
 	&& cp ./Nagios/check_postgres.cfg /etc/nagios/nrpe.d/ \
+	&& cp ./Nagios/check_mongo.cfg /etc/nagios/nrpe.d/ \
 	&& chmod +x /usr/lib/nagios/plugins/* \
         && chmod +x ./Nagios/start
 
