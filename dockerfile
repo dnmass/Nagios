@@ -8,6 +8,7 @@ RUN apt-get update \
         && git clone https://github.com/dnmass/Nagios.git ./Nagios/ \
         && cp ./Nagios/nrpe.cfg /etc/nagios/nrpe.cfg  \
 	&& cp ./Nagios/check_mongodb.py /usr/lib/nagios/plugins/ \
+	&& cp ./Nagios/check_postgres.cfg /etc/nagios/nrpe.d/ \
 	&& chmod +x /usr/lib/nagios/plugins/* \
         && chmod +x ./Nagios/start
 
