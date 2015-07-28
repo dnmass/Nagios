@@ -1,4 +1,0 @@
-#!/bin/bash
-
-
-/usr/bin/check_postgres --action=connection --host=$1 --port=$2  --dbuser=$3 --dbpass=$4 --output=simple 
